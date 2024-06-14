@@ -46,9 +46,11 @@ const VerifyAccount = () => {
       console.log("🚀 ~ file: page.tsx:71 ~ error 😀👏:", error);
       const axiosError = error as AxiosError<ApiResponse>;
       toast({
-        title: "Signup failed",
-        description: axiosError.response?.data.message,
-        variant: "destructive",
+        title: 'Verification Failed',
+        description:
+          axiosError.response?.data.message ??
+          'An error occurred. Please try again.',
+        variant: 'destructive',
       });
     }
   };

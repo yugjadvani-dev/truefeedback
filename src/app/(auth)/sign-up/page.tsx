@@ -83,6 +83,7 @@ const SignUp = () => {
       console.log("🚀 ~ file: page.tsx:71 ~ error 😀👏:", error);
       const axiosError = error as AxiosError<ApiResponse>;
       let errorMessage = axiosError.response?.data.message;
+      ('There was a problem with your sign-up. Please try again.');
       toast({
         title: "Signup failed",
         description: errorMessage,
